@@ -1,30 +1,33 @@
 <template>
   <div class="home">
-    <div>{{ title }}</div>
-    <el-table :data="tableData"
-              style="width: 100%">
-      <el-table-column prop="date"
-                       label="日期"
-                       width="180">
-      </el-table-column>
-      <el-table-column prop="name"
-                       label="姓名"
-                       width="180">
-      </el-table-column>
-      <el-table-column prop="address"
-                       label="地址">
-      </el-table-column>
-    </el-table>
-    <el-pagination @size-change="handleSizeChange"
-                   @current-change="handleCurrentChange"
-                   :current-page="pagination.page"
-                   :page-sizes="pagination.pageSizes"
-                   :page-size="pagination.pageSize"
-                   :total="pagination.total"
-                   background
-                   layout="total, sizes, prev, pager, next"
-                   class="pagination-cls">
-    </el-pagination>
+    <div class="page-header">{{ title }}</div>
+    <div class="page-body"
+         style="padding-top: 0;">
+      <el-table :data="tableData"
+                style="width: 100%">
+        <el-table-column prop="date"
+                         label="日期"
+                         width="180">
+        </el-table-column>
+        <el-table-column prop="name"
+                         label="姓名"
+                         width="180">
+        </el-table-column>
+        <el-table-column prop="address"
+                         label="地址">
+        </el-table-column>
+      </el-table>
+      <el-pagination @size-change="handleSizeChange"
+                     @current-change="handleCurrentChange"
+                     :current-page="pagination.page"
+                     :page-sizes="pagination.pageSizes"
+                     :page-size="pagination.pageSize"
+                     :total="pagination.total"
+                     background
+                     layout="total, sizes, prev, pager, next"
+                     class="pagination-cls">
+      </el-pagination>
+    </div>
   </div>
 </template>
 
@@ -108,10 +111,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .home {
-  padding: 16px 20px;
   .pagination-cls {
     text-align: right;
-    margin-top: 16px;
+    margin-top: 10px;
   }
 }
 </style>

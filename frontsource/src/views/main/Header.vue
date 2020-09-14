@@ -1,8 +1,8 @@
 <template>
-  <header class="top-header">
-    <div class="sys-title">
-      <img class="sys-logo"
-           src="@/assets/new_logo.png">
+  <header class="system-header">
+    <div class="system-title">
+      <img class="system-logo"
+           src="@/assets/logo.png">
       <div class="title-text">{{ title }}</div>
     </div>
     <div class="operation">
@@ -21,14 +21,14 @@
 export default {
   data() {
     return {
-      title: '一站式研发管理平台',
+      title: '研发平台',
       userName: '莫小山',
     };
   },
 };
 </script>
 <style lang="scss" scoped>
-.top-header {
+.system-header {
   height: 50px;
   box-sizing: border-box;
   border-bottom: 1px solid #dcdfe6;
@@ -37,18 +37,18 @@ export default {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  .sys-title {
+  .system-title {
     height: 100%;
     display: flex;
     align-items: center;
-    .sys-logo {
+    .system-logo {
       width: 34px;
-      margin-right: 20px;
+      margin-right: 10px;
     }
     .title-text {
       color: #409eff;
       font-size: 20px;
-      font-weight: 400;
+      font-weight: bold;
     }
   }
   .operation {

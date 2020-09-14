@@ -1,9 +1,9 @@
 <template>
   <div class="main">
     <Header />
-    <div class="page-content">
+    <div class="system-body">
       <NavMenu />
-      <div class="page-view">
+      <div class="system-content">
         <router-view />
       </div>
     </div>
@@ -25,11 +25,11 @@ export default {
 <style lang="scss" scoped>
 .main {
   height: 100vh;
-  .page-content {
+  .system-body {
     height: calc(100% - 50px);
     padding-left: 50px;
     position: relative;
-    .page-view {
+    .system-content {
       height: 100%;
       overflow-y: auto;
     }
