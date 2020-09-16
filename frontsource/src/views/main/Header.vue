@@ -18,6 +18,7 @@
   </header>
 </template>
 <script>
+import service from '@/service';
 export default {
   data() {
     return {
