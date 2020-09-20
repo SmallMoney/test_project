@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Message } from 'element-ui';
 
-const baseURL = '/';
+const baseURL = process.env.NODE_ENV === 'development' ? '/' : '/';
 const HTTP_METHOD = ['get', 'post', 'put', 'delete'];
 
 const service = axios.create({
