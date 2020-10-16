@@ -45,6 +45,8 @@
   </div>
 </template>
 <script>
+import service from '@/service';
+const API = service.login;
 export default {
   data() {
     return {
@@ -59,9 +61,16 @@ export default {
     onSubmit() {
       this.$refs.formRef.validate((valid) => {
         if (valid) {
-          // todo submit
-          this.$router.push({
-            name: 'home',
+          let { userName: loginname, password } = this.form;
+          let params = {
+            loginname,
+            password,
+          };
+          API.login({ params }).then(({ data }) => {
+            console.log(data);
+            this.$router.push({
+              name: 'home',
+            });
           });
         }
       });
